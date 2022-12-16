@@ -1,40 +1,94 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-        debugShowCheckedModeBanner: false,
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "🛍️List of Fruits",
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.green.shade700,
+        ),
+        body: Center(
+          child: Text.rich(TextSpan(children: [
+            TextSpan(
+                text: "\n🍎Apple\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.red,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),
+            TextSpan(
+                text: "\n🍇Greps\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.purpleAccent,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),
 
-        home: Scaffold(backgroundColor: Colors.yellow,
-            appBar: AppBar(
-                title: Text("Flutter"), centerTitle: true,
-                actions: [
-                PopupMenuButton(itemBuilder:((context) => [
-            PopupMenuItem(child: Text("Menu")),
-            PopupMenuItem(child: Text("Setting"))
-              ]
-              ),
-                ),
-  ],
+            TextSpan(
+                text: "\n🍒Cheery\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.purple,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),
+            TextSpan(
+                text: "\n🍓Strawberry\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.pink,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),    TextSpan(
+                text: "\n🥭Mango\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.yellow.shade900,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),    TextSpan(
+                text: "\n🍍Pinepple\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green.shade500,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),    TextSpan(
+                text: "\n🍋Lemon\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.yellow,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),    TextSpan(
+                text: "\n\🍉Watermalon\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green.shade400,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),    TextSpan(
+                text: "\n🥥Coconut\n",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.brown.shade500,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.bold)),
 
-  ),
-  body: Center(
-  child: Text("Project",style: TextStyle(
-  fontSize: 30,
-  color:Colors.redAccent,backgroundColor: Colors.lightBlue),
-  ),
-  ),
-  floatingActionButton: FloatingActionButton(
-  onPressed: () {},
-  child: Icon(Icons.add),
-
-  )
-  ,
 
 
-  )
-  ,
-  )
 
-  );
+
+
+
+
+
+
+
+
+          ])),
+        ),
+      ),
+    ),
+  ));
 }
